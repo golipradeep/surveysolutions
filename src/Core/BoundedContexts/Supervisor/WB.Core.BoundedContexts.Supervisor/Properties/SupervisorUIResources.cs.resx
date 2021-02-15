@@ -157,4 +157,43 @@
   <data name="Synchronization_UploadStatisticsStats" xml:space="preserve">
     <value>Odesláno {0} z {1}</value>
   </data>
+  <data name="CollectedInterviews" xml:space="preserve">
+    <value>Přiřazené dotazníky</value>
+  </data>
+  <data name="Outbox" xml:space="preserve">
+    <value>Odeslané</value>
+  </data>
+  <data name="OutboxSubtitle" xml:space="preserve">
+    <value>Přiřazené dotazníky budou odeslány z vašeho zařízení během příští synchronizace</value>
+  </data>
+  <data name="SentToInterviewer" xml:space="preserve">
+    <value>Na odeslání</value>
+  </data>
+  <data name="SentToInterviewerSubtitle" xml:space="preserve">
+    <value>Přiřazené dotazníky, které jsou na tazatelském zařízení</value>
+  </data>
+  <data name="ToBeAssigned" xml:space="preserve">
+    <value>K přiřazení</value>
+  </data>
+  <data name="ToBeAssignedListSubtitle" xml:space="preserve">
+    <value>Dotazníky, které je potřeba přiřadit Vašim tazatelům</value>
+  </data>
+  <data name="WaitingForAction" xml:space="preserve">
+    <value>Ke schválení</value>
+  </data>
+  <data name="WaitingForSupervisorActionSubtitle" xml:space="preserve">
+    <value>Dotazníky, které čekají na schválení</value>
+  </data>
+  <data name="YourTeam" xml:space="preserve">
+    <value>Nepřiřazené dotazníky</value>
+  </data>
+  <data name="NotAllowedAnswеringNonSupervisor" xml:space="preserve">
+    <value>Garant nemá právo odpovídat na tazatelské otázky</value>
+  </data>
+  <data name="Resolve" xml:space="preserve">
+    <value>Zhodnocení</value>
+  </data>
+  <data name="ResolveComment" xml:space="preserve">
+    <value>Komentář </value>
+  </data>
 </root>

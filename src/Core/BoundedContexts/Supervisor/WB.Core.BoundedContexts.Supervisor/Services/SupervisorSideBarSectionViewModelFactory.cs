@@ -14,7 +14,7 @@ namespace WB.Core.BoundedContexts.Supervisor.Services
         public override ISideBarItem BuildCompleteItem(NavigationState navigationState, string interviewId)
         {
             var sideBarItem = this.serviceLocator.GetInstance<SideBarCompleteSectionViewModel>();
-            sideBarItem.Init(navigationState, interviewId, InterviewDetails.Resolve);
+            sideBarItem.Init(navigationState, interviewId, SupervisorUIResources.Resolve);
             return sideBarItem;
         }
     }

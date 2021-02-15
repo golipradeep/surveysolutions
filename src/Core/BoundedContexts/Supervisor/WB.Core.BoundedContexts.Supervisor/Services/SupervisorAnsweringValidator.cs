@@ -14,7 +14,7 @@ namespace WB.Core.BoundedContexts.Supervisor.Services
             if (aggregate.GetQuestion(command.Question).IsSupervisors || command is ResolveCommentAnswerCommand)
                 return;
 
-            throw new AnswerNotAcceptedException(InterviewMessages.NotAllowedAnswеringNonSupervisor);
+            throw new AnswerNotAcceptedException(SupervisorUIResources.NotAllowedAnswеringNonSupervisor);
         }
     }
 }

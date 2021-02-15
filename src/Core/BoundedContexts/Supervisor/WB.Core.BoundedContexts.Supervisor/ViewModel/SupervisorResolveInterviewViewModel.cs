@@ -75,9 +75,9 @@ namespace WB.Core.BoundedContexts.Supervisor.ViewModel
         {
             base.Configure(interviewId, navigationState);
 
-            this.Name.InitAsStatic(InterviewDetails.Resolve);
+            this.Name.InitAsStatic(SupervisorUIResources.Resolve);
 
-            this.CommentLabel = InterviewDetails.ResolveComment;
+            this.CommentLabel = SupervisorUIResources.ResolveComment;
 
             interview = this.interviewRepository.Get(interviewId);
             this.status = interview.Status;

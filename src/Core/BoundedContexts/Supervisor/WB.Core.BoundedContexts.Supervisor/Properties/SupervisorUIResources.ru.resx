@@ -160,4 +160,43 @@
   <data name="Confirm_Approve_Synchronized_Interview_Message" xml:space="preserve">
     <value>Текущий интервьюер, ответственный за интервью не буюден уведомлен об утверждении до следующей синхронизации. Если работа будет начата к тому моменту, то все введенные данные будут утеряны!</value>
   </data>
+  <data name="CollectedInterviews" xml:space="preserve">
+    <value>Собранные интервью</value>
+  </data>
+  <data name="Outbox" xml:space="preserve">
+    <value>Исходящие</value>
+  </data>
+  <data name="OutboxSubtitle" xml:space="preserve">
+    <value>Задания и интервью, которые будут отправлены с Вашего устройства при следующей синхронизации </value>
+  </data>
+  <data name="SentToInterviewer" xml:space="preserve">
+    <value>Отправлено интервьюерам</value>
+  </data>
+  <data name="SentToInterviewerSubtitle" xml:space="preserve">
+    <value>Задания и интервью, которые уже отправлены на устройства интервьюеров</value>
+  </data>
+  <data name="ToBeAssigned" xml:space="preserve">
+    <value>Распределить задания</value>
+  </data>
+  <data name="ToBeAssignedListSubtitle" xml:space="preserve">
+    <value>Задания, которые необходимо распределить между членами Вашей команды</value>
+  </data>
+  <data name="WaitingForAction" xml:space="preserve">
+    <value>Ожидают решения</value>
+  </data>
+  <data name="WaitingForSupervisorActionSubtitle" xml:space="preserve">
+    <value>Интревью, которые ожидают Вашего решения для завершения</value>
+  </data>
+  <data name="YourTeam" xml:space="preserve">
+    <value>Команда</value>
+  </data>
+  <data name="NotAllowedAnswеringNonSupervisor" xml:space="preserve">
+    <value>Супервизору не разрешено давать ответы на вопросы интервьюера</value>
+  </data>
+  <data name="Resolve" xml:space="preserve">
+    <value>Завершить</value>
+  </data>
+  <data name="ResolveComment" xml:space="preserve">
+    <value>Комментарий к изменению статуса</value>
+  </data>
 </root>

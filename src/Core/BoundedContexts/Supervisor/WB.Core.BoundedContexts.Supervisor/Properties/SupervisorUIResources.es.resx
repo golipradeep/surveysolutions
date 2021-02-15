@@ -153,4 +153,43 @@
   <data name="Synchronization_UploadStatisticsStats" xml:space="preserve">
     <value>Subido {0} de {1}</value>
   </data>
+  <data name="CollectedInterviews" xml:space="preserve">
+    <value>Entrevistas recopiladas</value>
+  </data>
+  <data name="Outbox" xml:space="preserve">
+    <value>Bandeja de salida</value>
+  </data>
+  <data name="OutboxSubtitle" xml:space="preserve">
+    <value>Entrevistas y asignaciones a ser enviadas desde su dispositivo durante la sincronización</value>
+  </data>
+  <data name="SentToInterviewer" xml:space="preserve">
+    <value>Enviados al entrevistador</value>
+  </data>
+  <data name="SentToInterviewerSubtitle" xml:space="preserve">
+    <value>Asignaciones y entrevistas que están en el dispositivo del entrevistador</value>
+  </data>
+  <data name="ToBeAssigned" xml:space="preserve">
+    <value>Asignaciones por realizar</value>
+  </data>
+  <data name="ToBeAssignedListSubtitle" xml:space="preserve">
+    <value>Asignaciones que deben asignarse a los miembros de su equipo</value>
+  </data>
+  <data name="WaitingForAction" xml:space="preserve">
+    <value>Esperando por su acción</value>
+  </data>
+  <data name="WaitingForSupervisorActionSubtitle" xml:space="preserve">
+    <value>Entrevistas que requieren que se resuelva su acción</value>
+  </data>
+  <data name="YourTeam" xml:space="preserve">
+    <value>Tu equipo</value>
+  </data>
+  <data name="NotAllowedAnswеringNonSupervisor" xml:space="preserve">
+    <value>El supervisor no puede responder preguntas que no sean del supervisor</value>
+  </data>
+  <data name="Resolve" xml:space="preserve">
+    <value>Resolver</value>
+  </data>
+  <data name="ResolveComment" xml:space="preserve">
+    <value>Comentario de cambio de estado</value>
+  </data>
 </root>

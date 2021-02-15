@@ -84,7 +84,7 @@ namespace WB.Core.BoundedContexts.Supervisor.ViewModel.Dashboard
         public override async Task Initialize()
         {
             await base.Initialize();
-            this.DashboardTitle = SupervisorDashboard.ToBeAssigned;
+            this.DashboardTitle = SupervisorUIResources.ToBeAssigned;
         }
 
         public IMvxAsyncCommand SynchronizationCommand => new MvxAsyncCommand(this.RunSynchronization);

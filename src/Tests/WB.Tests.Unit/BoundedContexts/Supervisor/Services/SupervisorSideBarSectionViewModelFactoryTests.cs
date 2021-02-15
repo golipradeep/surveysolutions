@@ -22,7 +22,7 @@ namespace WB.Tests.Unit.BoundedContexts.Supervisor.Services
             var factory = new SupervisorSideBarSectionViewModelFactory(serviceLocator);
             var completeItem = factory.BuildCompleteItem(Create.Other.NavigationState(), Id.g1.FormatGuid());
 
-            completeItem.Title.PlainText.Should().Be(InterviewDetails.Resolve);
+            completeItem.Title.PlainText.Should().Be(SupervisorUIResources.Resolve);
         }
     }
 }

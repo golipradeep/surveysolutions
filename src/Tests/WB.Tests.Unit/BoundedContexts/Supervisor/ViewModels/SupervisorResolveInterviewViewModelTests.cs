@@ -43,7 +43,7 @@ namespace WB.Tests.Unit.BoundedContexts.Supervisor.ViewModels
         {
             var viewModel = CreateViewModel();
             viewModel.Configure(InterviewId.FormatGuid(), Create.Other.NavigationState());
-            Assert.That(viewModel.Name.PlainText, Is.EqualTo(InterviewDetails.Resolve));
+            Assert.That(viewModel.Name.PlainText, Is.EqualTo(SupervisorUIResources.Resolve));
         }
 
         [Test]

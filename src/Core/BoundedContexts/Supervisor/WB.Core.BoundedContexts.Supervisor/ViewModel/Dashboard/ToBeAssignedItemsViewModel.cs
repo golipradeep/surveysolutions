@@ -23,7 +23,7 @@ namespace WB.Core.BoundedContexts.Supervisor.ViewModel.Dashboard
             this.dashboardItemsAccessor = dashboardItemsAccessor;
             this.viewModelFactory = viewModelFactory;
 
-            this.Title = SupervisorDashboard.ToBeAssigned;
+            this.Title = SupervisorUIResources.ToBeAssigned;
         }
 
         public override async Task Initialize()
@@ -31,14 +31,14 @@ namespace WB.Core.BoundedContexts.Supervisor.ViewModel.Dashboard
             await base.Initialize();
         }
 
-        public string TabTitle => SupervisorDashboard.ToBeAssigned;
+        public string TabTitle => SupervisorUIResources.ToBeAssigned;
 
         public override GroupStatus InterviewStatus => GroupStatus.NotStarted;
 
         protected override IEnumerable<IDashboardItem> GetUiItems()
         {
             var subtitle = viewModelFactory.GetNew<DashboardSubTitleViewModel>();
-            subtitle.Title = SupervisorDashboard.ToBeAssignedListSubtitle;
+            subtitle.Title = SupervisorUIResources.ToBeAssignedListSubtitle;
 
             var tasksToBeAssigned = this.dashboardItemsAccessor.TasksToBeAssigned().ToList();
 

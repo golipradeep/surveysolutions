@@ -33,7 +33,7 @@ namespace WB.Core.BoundedContexts.Supervisor.ViewModel.Dashboard
             this.dashboardItemsAccessor = dashboardItemsAccessor;
             this.viewModelFactory = viewModelFactory;
 
-            this.Title = SupervisorDashboard.Outbox;
+            this.Title = SupervisorUIResources.Outbox;
         }
 
         public override GroupStatus InterviewStatus => GroupStatus.Completed;
@@ -41,7 +41,7 @@ namespace WB.Core.BoundedContexts.Supervisor.ViewModel.Dashboard
         protected override IEnumerable<IDashboardItem> GetUiItems()
         {
             var subtitle = viewModelFactory.GetNew<DashboardSubTitleViewModel>();
-            subtitle.Title = SupervisorDashboard.OutboxSubtitle;
+            subtitle.Title = SupervisorUIResources.OutboxSubtitle;
 
             yield return subtitle;
 

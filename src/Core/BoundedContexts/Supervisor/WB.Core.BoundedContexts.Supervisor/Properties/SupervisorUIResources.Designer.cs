@@ -61,11 +61,29 @@ namespace WB.Core.BoundedContexts.Supervisor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Collected interviews.
+        /// </summary>
+        public static string CollectedInterviews {
+            get {
+                return ResourceManager.GetString("CollectedInterviews", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Current responsible interviewer will not be notified about the interview approving until the next synchronization. If interviewer has started working on the interview already, all the data that interviewer has entered before the next synchronization will be DISCARDED!.
         /// </summary>
         public static string Confirm_Approve_Synchronized_Interview_Message {
             get {
                 return ResourceManager.GetString("Confirm_Approve_Synchronized_Interview_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Supervisor is not allowed to answer non supervisor questions.
+        /// </summary>
+        public static string NotAllowedAnswеringNonSupervisor {
+            get {
+                return ResourceManager.GetString("NotAllowedAnswеringNonSupervisor", resourceCulture);
             }
         }
         
@@ -103,6 +121,60 @@ namespace WB.Core.BoundedContexts.Supervisor.Properties {
         public static string OfflineSync_WaitingInterviewers {
             get {
                 return ResourceManager.GetString("OfflineSync_WaitingInterviewers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Outbox.
+        /// </summary>
+        public static string Outbox {
+            get {
+                return ResourceManager.GetString("Outbox", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Interviews and assignments that are going to be sent from your device during next synchronization .
+        /// </summary>
+        public static string OutboxSubtitle {
+            get {
+                return ResourceManager.GetString("OutboxSubtitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resolve.
+        /// </summary>
+        public static string Resolve {
+            get {
+                return ResourceManager.GetString("Resolve", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Status change comment.
+        /// </summary>
+        public static string ResolveComment {
+            get {
+                return ResourceManager.GetString("ResolveComment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sent to interviewer.
+        /// </summary>
+        public static string SentToInterviewer {
+            get {
+                return ResourceManager.GetString("SentToInterviewer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Assignments and interviews that are on interviewer devices.
+        /// </summary>
+        public static string SentToInterviewerSubtitle {
+            get {
+                return ResourceManager.GetString("SentToInterviewerSubtitle", resourceCulture);
             }
         }
         
@@ -175,6 +247,51 @@ namespace WB.Core.BoundedContexts.Supervisor.Properties {
         public static string Synchronization_UploadStatisticsStats {
             get {
                 return ResourceManager.GetString("Synchronization_UploadStatisticsStats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tasks to assign.
+        /// </summary>
+        public static string ToBeAssigned {
+            get {
+                return ResourceManager.GetString("ToBeAssigned", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Assignments that should be assigned to your team members.
+        /// </summary>
+        public static string ToBeAssignedListSubtitle {
+            get {
+                return ResourceManager.GetString("ToBeAssignedListSubtitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Waiting for your action.
+        /// </summary>
+        public static string WaitingForAction {
+            get {
+                return ResourceManager.GetString("WaitingForAction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Interviews that require your action to be resolved.
+        /// </summary>
+        public static string WaitingForSupervisorActionSubtitle {
+            get {
+                return ResourceManager.GetString("WaitingForSupervisorActionSubtitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your team.
+        /// </summary>
+        public static string YourTeam {
+            get {
+                return ResourceManager.GetString("YourTeam", resourceCulture);
             }
         }
     }

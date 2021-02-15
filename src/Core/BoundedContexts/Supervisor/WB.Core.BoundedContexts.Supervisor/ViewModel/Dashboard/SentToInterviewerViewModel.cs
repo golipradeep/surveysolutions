@@ -23,17 +23,17 @@ namespace WB.Core.BoundedContexts.Supervisor.ViewModel.Dashboard
             this.dashboardItemsAccessor = dashboardItemsAccessor;
             this.viewModelFactory = viewModelFactory;
 
-            this.Title = SupervisorDashboard.SentToInterviewer;
+            this.Title = SupervisorUIResources.SentToInterviewer;
         }
 
-        public string TabTitle => SupervisorDashboard.ToBeAssigned;
+        public string TabTitle => SupervisorUIResources.ToBeAssigned;
 
         public override GroupStatus InterviewStatus => GroupStatus.Disabled;
 
         protected override IEnumerable<IDashboardItem> GetUiItems()
         {
             var subtitle = viewModelFactory.GetNew<DashboardSubTitleViewModel>();
-            subtitle.Title = SupervisorDashboard.SentToInterviewerSubtitle;
+            subtitle.Title = SupervisorUIResources.SentToInterviewerSubtitle;
 
             var tasksToBeAssigned = this.dashboardItemsAccessor.GetSentToInterviewerItems();
 

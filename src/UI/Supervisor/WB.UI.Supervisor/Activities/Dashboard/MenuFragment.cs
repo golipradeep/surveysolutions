@@ -30,12 +30,12 @@ namespace WB.UI.Supervisor.Activities.Dashboard
             navigationView = view.FindViewById<NavigationView>(Resource.Id.dashboard_sidebar_navigation);
             navigationView.SetNavigationItemSelectedListener(this);
 
-            LocalizeMenuItem(Resource.Id.dashboard_to_be_assigned, SupervisorDashboard.ToBeAssigned, nameof(ViewModel.ToBeAssignedItemsCount));
-            LocalizeMenuItem(Resource.Id.dashboard_your_team, SupervisorDashboard.YourTeam);
-            LocalizeMenuItem(Resource.Id.dashboard_collected_interviews, SupervisorDashboard.CollectedInterviews);
-            LocalizeMenuItem(Resource.Id.dashboard_waiting_decision, SupervisorDashboard.WaitingForAction, nameof(ViewModel.WaitingForDecisionCount));
-            LocalizeMenuItem(Resource.Id.dashboard_outbox, SupervisorDashboard.Outbox, nameof(ViewModel.OutboxItemsCount));
-            LocalizeMenuItem(Resource.Id.dashboard_sent, SupervisorDashboard.SentToInterviewer, nameof(ViewModel.SentToInterviewerCount));
+            LocalizeMenuItem(Resource.Id.dashboard_to_be_assigned, SupervisorUIResources.ToBeAssigned, nameof(ViewModel.ToBeAssignedItemsCount));
+            LocalizeMenuItem(Resource.Id.dashboard_your_team, SupervisorUIResources.YourTeam);
+            LocalizeMenuItem(Resource.Id.dashboard_collected_interviews, SupervisorUIResources.CollectedInterviews);
+            LocalizeMenuItem(Resource.Id.dashboard_waiting_decision, SupervisorUIResources.WaitingForAction, nameof(ViewModel.WaitingForDecisionCount));
+            LocalizeMenuItem(Resource.Id.dashboard_outbox, SupervisorUIResources.Outbox, nameof(ViewModel.OutboxItemsCount));
+            LocalizeMenuItem(Resource.Id.dashboard_sent, SupervisorUIResources.SentToInterviewer, nameof(ViewModel.SentToInterviewerCount));
 
             return view;
         }
