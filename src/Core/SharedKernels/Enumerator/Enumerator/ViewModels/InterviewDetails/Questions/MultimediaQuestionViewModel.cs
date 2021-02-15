@@ -158,20 +158,20 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
             else
             {
                 var choosen = await this.userInteractionService.SelectOneOptionFromList(
-                    UIResources.Multimedia_PictureSource, new[]
+                    EnumeratorUIResources.Multimedia_PictureSource, new[]
                     {
-                        UIResources.Multimedia_TakePhoto,
-                        UIResources.Multimedia_PickFromGallery
+                        EnumeratorUIResources.Multimedia_TakePhoto,
+                        EnumeratorUIResources.Multimedia_PickFromGallery
                     });
 
                 try
                 {
                     Stream pictureStream = null;
-                    if (choosen == UIResources.Multimedia_TakePhoto)
+                    if (choosen == EnumeratorUIResources.Multimedia_TakePhoto)
                     {
                         pictureStream = await this.pictureChooser.TakePicture();
                     }
-                    else if (choosen == UIResources.Multimedia_PickFromGallery)
+                    else if (choosen == EnumeratorUIResources.Multimedia_PickFromGallery)
                     {
                         pictureStream = await this.pictureChooser.ChoosePictureGallery();
                     }
@@ -207,12 +207,12 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
                 }
                 catch (MissingPermissionsException e) when (e.PermissionType == typeof(CameraPermission))
                 {
-                    await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(UIResources
+                    await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(EnumeratorUIResources
                         .MissingPermissions_Camera);
                 }
                 catch (MissingPermissionsException e) when (e.PermissionType == typeof(StoragePermission))
                 {
-                    await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(UIResources
+                    await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(EnumeratorUIResources
                         .MissingPermissions_Storage);
                 }
                 catch (MissingPermissionsException mpe)

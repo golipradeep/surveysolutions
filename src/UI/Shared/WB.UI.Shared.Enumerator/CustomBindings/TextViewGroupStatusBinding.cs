@@ -36,7 +36,7 @@ namespace WB.UI.Shared.Enumerator.CustomBindings
 
         private SpannableString GetSpannableStringForUnansweredState(GroupNavigationViewModel.GroupStatistics statistics)
         {
-            var unansweredQuestionsFormatString = UIResources.Interview_PreviousGroupNavigation_UnansweredQuestions;
+            var unansweredQuestionsFormatString = EnumeratorUIResources.Interview_PreviousGroupNavigation_UnansweredQuestions;
             var groupStatisticsText = unansweredQuestionsFormatString.FormatString(statistics.UnansweredQuestionsCount);
             groupStatisticsText = groupStatisticsText.ToUpper();
 
@@ -53,7 +53,7 @@ namespace WB.UI.Shared.Enumerator.CustomBindings
 
         private SpannableString GetSpannableStringForAnsweredState(GroupNavigationViewModel.GroupStatistics statistics)
         {
-            var groupStatisticsText = UIResources.Interview_PreviousGroupNavigation_AnsweredQuestions.FormatString(statistics.EnabledQuestionsCount);
+            var groupStatisticsText = EnumeratorUIResources.Interview_PreviousGroupNavigation_AnsweredQuestions.FormatString(statistics.EnabledQuestionsCount);
             groupStatisticsText = groupStatisticsText.ToUpper();
             var spannableText = new SpannableString(groupStatisticsText);
             var answeredColor = this.GetColorFromResources(Resource.Color.previous_group_navigation_answered);

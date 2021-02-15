@@ -21,7 +21,7 @@ namespace WB.UI.Shared.Enumerator.Converters
                     culture = indonesianCultureInfo;
             }
             
-            return UIResources.ResourceManager.GetString(value, culture);
+            return EnumeratorUIResources.ResourceManager.GetString(value, culture);
         }
     }
 }

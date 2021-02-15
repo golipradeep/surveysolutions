@@ -79,7 +79,7 @@ namespace WB.Core.BoundedContexts.Interviewer.Synchronization
                             {
                                 Title = EnumeratorUIResources.Synchronization_DownloadApplication,
                                 Description = string.Format(
-                                    EnumeratorUIResources.Synchronization_DownloadApplication_Description,
+                                   EnumeratorUIResources.Synchronization_DownloadApplication_Description,
                                     receivedKilobytes.Humanize("0.00"),
                                     totalKilobytes.Humanize("0.00"),
                                     speed,

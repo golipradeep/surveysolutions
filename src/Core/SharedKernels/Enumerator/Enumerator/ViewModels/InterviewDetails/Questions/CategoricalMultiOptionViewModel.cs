@@ -38,7 +38,7 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
             {
                 this.wasChecked = true;
                 var canRemoveRoster = await this.userInteraction.ConfirmAsync(
-                    string.Format(UIResources.Interview_Questions_RemoveRowFromRosterMessage,
+                    string.Format(EnumeratorUIResources.Interview_Questions_RemoveRowFromRosterMessage,
                         $"<b>'{this.Title}'</b>"));
                 this.wasChecked = false;
 

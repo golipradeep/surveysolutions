@@ -27,7 +27,7 @@ namespace WB.UI.Shared.Enumerator.CustomBindings
                 {
                     colorid = Resource.Color.notAnsweredLabel;
                     typeFace = TypefaceStyle.BoldItalic;
-                    control.SetText(UIResources.Interview_Overview_NotAnswered, TextView.BufferType.Normal);
+                    control.SetText(EnumeratorUIResources.Interview_Overview_NotAnswered, TextView.BufferType.Normal);
                     break;
                 }
                 case OverviewNodeState.Invalid:

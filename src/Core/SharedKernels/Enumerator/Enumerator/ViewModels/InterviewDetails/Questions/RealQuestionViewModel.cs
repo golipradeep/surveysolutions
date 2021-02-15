@@ -163,14 +163,14 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
         {
             if (this.Answer == null)
             {
-                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(UIResources
+                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(EnumeratorUIResources
                     .Interview_Question_Integer_EmptyValueError);
                 return;
             }
 
             if (this.Answer > jsonSerializerDecimalLimit || this.Answer < -jsonSerializerDecimalLimit)
             {
-                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(UIResources.Interview_Question_Real_ParsingError);
+                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(EnumeratorUIResources.Interview_Question_Real_ParsingError);
                 return;
             }
 

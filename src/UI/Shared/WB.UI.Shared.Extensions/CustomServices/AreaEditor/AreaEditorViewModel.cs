@@ -203,7 +203,7 @@ namespace WB.UI.Shared.Extensions.CustomServices.AreaEditor
             }
             else
             {
-                this.userInteractionService.ShowToast(UIResources.AreaMap_NoChangesInfo);
+                this.userInteractionService.ShowToast(EnumeratorUIResources.AreaMap_NoChangesInfo);
             }
         });
 
@@ -234,7 +234,7 @@ namespace WB.UI.Shared.Extensions.CustomServices.AreaEditor
             catch (Exception e)
             {
                 logger.Error("Error on shapefile loading", e);
-                userInteractionService.ShowToast(UIResources.AreaMap_ErrorOnShapefileLoading);
+                userInteractionService.ShowToast(EnumeratorUIResources.AreaMap_ErrorOnShapefileLoading);
             }
         });
 
@@ -279,7 +279,7 @@ namespace WB.UI.Shared.Extensions.CustomServices.AreaEditor
 
             if (!GeometryEngine.Contains(extent, point))
             {
-                this.userInteractionService.ShowToast(UIResources.AreaMap_LocationOutOfBoundaries);
+                this.userInteractionService.ShowToast(EnumeratorUIResources.AreaMap_LocationOutOfBoundaries);
             }
         }
 
@@ -401,11 +401,11 @@ namespace WB.UI.Shared.Extensions.CustomServices.AreaEditor
             var area = this.GetGeometryArea(geometry);
             var length = this.GetGeometryLength(geometry);
 
-            this.GeometryArea = area > 0 ? string.Format(UIResources.AreaMap_AreaFormat, area.ToString("#.##")) : string.Empty;
+            this.GeometryArea = area > 0 ? string.Format(EnumeratorUIResources.AreaMap_AreaFormat, area.ToString("#.##")) : string.Empty;
             this.GeometryLengthLabel = length > 0 ? string.Format(
                 this.requestedGeometryType == GeometryType.Polygon
-                    ? UIResources.AreaMap_PerimeterFormat
-                    : UIResources.AreaMap_LengthFormat, length.ToString("#.##")) : string.Empty;
+                    ? EnumeratorUIResources.AreaMap_PerimeterFormat
+                    : EnumeratorUIResources.AreaMap_LengthFormat, length.ToString("#.##")) : string.Empty;
         }
 
         private int GetGeometryPointsCount(Geometry geometry)

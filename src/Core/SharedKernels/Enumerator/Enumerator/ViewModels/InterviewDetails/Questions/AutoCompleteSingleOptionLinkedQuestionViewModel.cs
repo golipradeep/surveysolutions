@@ -131,7 +131,7 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
 
             if (selectedOption == null)
             {
-                var errorMessage = UIResources.Interview_Question_Filter_MatchError.FormatString(this.FilterText);
+                var errorMessage = EnumeratorUIResources.Interview_Question_Filter_MatchError.FormatString(this.FilterText);
                 await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(errorMessage).ConfigureAwait(false);
                 return;
             }

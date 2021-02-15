@@ -119,7 +119,7 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails
 
             assignmentId = interview.GetAssignmentId();
             interviewKey = interview.GetInterviewKey();
-            this.InterviewKey = interviewKey == null ? null : String.Format(UIResources.InterviewKey, interviewKey.ToString());
+            this.InterviewKey = interviewKey == null ? null : String.Format(EnumeratorUIResources.InterviewKey, interviewKey.ToString());
 
             this.availableLanguages = questionnaire.GetTranslationLanguages();
             this.currentLanguage = interview.Language;

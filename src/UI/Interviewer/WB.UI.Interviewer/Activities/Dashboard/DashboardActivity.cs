@@ -315,12 +315,12 @@ namespace WB.UI.Interviewer.Activities.Dashboard
 
             if (ViewModel.GoogleApiService.CanResolvePlayServicesErrorByUser(resultCode))
             {
-                this.ViewModel.ShowSynchronizationError(UIResources.OfflineSync_InstallPlayServices);
+                this.ViewModel.ShowSynchronizationError(EnumeratorUIResources.OfflineSync_InstallPlayServices);
                 this.ViewModel.GoogleApiService.ShowGoogleApiErrorDialog(resultCode,
                     RequestCodeRecoverPlayServices);
             }
             else
-                this.ViewModel.ShowSynchronizationError(UIResources.OfflineSync_DeviceNotSupported);
+                this.ViewModel.ShowSynchronizationError(EnumeratorUIResources.OfflineSync_DeviceNotSupported);
 
             return false;
         }

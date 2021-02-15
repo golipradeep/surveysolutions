@@ -169,15 +169,15 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
             }
             catch (NotImplementedException)
             {
-                userInteractionService.ShowToast(UIResources.Version_Not_Supports);
+                userInteractionService.ShowToast(EnumeratorUIResources.Version_Not_Supports);
             }
             catch (NotSupportedException)
             {
-                userInteractionService.ShowToast(UIResources.Device_Does_Not_Support);
+                userInteractionService.ShowToast(EnumeratorUIResources.Device_Does_Not_Support);
             }
             catch (MissingPermissionsException)
             {
-                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(UIResources.MissingPermissions_Storage);
+                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(EnumeratorUIResources.MissingPermissions_Storage);
             }
             finally
             {
@@ -208,12 +208,12 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
             this.HasArea = this.answer.AreaSize > 0;
             this.HasLength = this.answer.Length > 0;
 
-            this.PointsText = string.Format(UIResources.AreaMap_PointsFormat, this.answer.NumberOfPoints);
-            this.AreaText = string.Format(UIResources.AreaMap_AreaFormat, this.answer.AreaSize?.ToString("#.##"));
+            this.PointsText = string.Format(EnumeratorUIResources.AreaMap_PointsFormat, this.answer.NumberOfPoints);
+            this.AreaText = string.Format(EnumeratorUIResources.AreaMap_AreaFormat, this.answer.AreaSize?.ToString("#.##"));
             this.LengthText = string.Format(
                 this.geometryType == GeometryType.Polygon
-                    ? UIResources.AreaMap_PerimeterFormat
-                    : UIResources.AreaMap_LengthFormat, this.answer.Length?.ToString("#.##"));
+                    ? EnumeratorUIResources.AreaMap_PerimeterFormat
+                    : EnumeratorUIResources.AreaMap_LengthFormat, this.answer.Length?.ToString("#.##"));
         }
 
         public void Dispose()

@@ -130,7 +130,7 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
             }
             catch (MissingPermissionsException)
             {
-                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(UIResources.MissingPermissions_Camera);
+                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(EnumeratorUIResources.MissingPermissions_Camera);
             }
             finally
             {

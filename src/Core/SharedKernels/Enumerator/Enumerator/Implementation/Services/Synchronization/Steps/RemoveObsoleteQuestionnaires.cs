@@ -54,7 +54,7 @@ namespace WB.Core.SharedKernels.Enumerator.Implementation.Services.Synchronizati
                 {
                     Title = EnumeratorUIResources.Synchronization_Check_Obsolete_Questionnaires,
                     Description = string.Format(
-                        EnumeratorUIResources.Synchronization_Check_Obsolete_Questionnaires_Description,
+                       EnumeratorUIResources.Synchronization_Check_Obsolete_Questionnaires_Description,
                         removedQuestionnairesCounter, questionnairesToRemove.Count),
                     Statistics = this.Context.Statistics,
                     Status = SynchronizationStatus.Download,

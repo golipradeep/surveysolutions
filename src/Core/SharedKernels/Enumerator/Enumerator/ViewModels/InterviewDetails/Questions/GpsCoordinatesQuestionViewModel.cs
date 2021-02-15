@@ -146,24 +146,24 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
                 switch (e.Error)
                 {
                     case GeolocationError.PositionUnavailable:
-                        await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(UIResources.GpsQuestion_Timeout);
+                        await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(EnumeratorUIResources.GpsQuestion_Timeout);
                         break;
                     case GeolocationError.Unauthorized:
-                        await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(UIResources.GpsQuestion_MissingPermissions);
+                        await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(EnumeratorUIResources.GpsQuestion_MissingPermissions);
                         break;
                 }
             }
             catch (MissingPermissionsException)
             {
-                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(UIResources.GpsQuestion_MissingPermissions);
+                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(EnumeratorUIResources.GpsQuestion_MissingPermissions);
             }
             catch (OperationCanceledException)
             {
-                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(UIResources.GpsQuestion_Timeout);
+                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(EnumeratorUIResources.GpsQuestion_Timeout);
             }
             catch (Exception e)
             {
-                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(UIResources.GpsQuestion_Timeout);
+                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(EnumeratorUIResources.GpsQuestion_Timeout);
                 logger.Warn(e.Message, e);
             }
             finally
@@ -177,7 +177,7 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
         {
             if (location == null)
             {
-                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(UIResources.GpsQuestion_Timeout);
+                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(EnumeratorUIResources.GpsQuestion_Timeout);
                 return;
             }
 

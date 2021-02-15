@@ -53,8 +53,8 @@ namespace WB.UI.Shared.Enumerator.CustomServices
             bool isHtml = true)
         {
             var tcs = new TaskCompletionSource<bool>();
-            okButton ??= UIResources.Ok;
-            cancelButton ??= UIResources.Cancel;
+            okButton ??= EnumeratorUIResources.Ok;
+            cancelButton ??= EnumeratorUIResources.Cancel;
 
             this.Confirm(message, k => tcs.TrySetResult(k), title, okButton, cancelButton, isHtml);
             return tcs.Task;
@@ -68,8 +68,8 @@ namespace WB.UI.Shared.Enumerator.CustomServices
            bool isTextInputPassword=false)
         {
             var tcs = new TaskCompletionSource<string>();
-            okButton ??= UIResources.Ok;
-            cancelButton ??= UIResources.Cancel;
+            okButton ??= EnumeratorUIResources.Ok;
+            cancelButton ??= EnumeratorUIResources.Cancel;
 
             this.ConfirmWithTextInputImpl(message, k => tcs.TrySetResult(k ?? string.Empty),
                 () => tcs.TrySetResult(null), title,
@@ -90,7 +90,7 @@ namespace WB.UI.Shared.Enumerator.CustomServices
                 tcs.TrySetResult(options[args.Which]);
             });
             builder.SetCancelable(false);
-            builder.SetNegativeButton(UIResources.Cancel, (sender, args) =>
+            builder.SetNegativeButton(EnumeratorUIResources.Cancel, (sender, args) =>
             {
                 tcs.TrySetResult(null);
             });
@@ -154,7 +154,7 @@ namespace WB.UI.Shared.Enumerator.CustomServices
         public Task AlertAsync(string message, string title = "", string okButton = null)
         {
             var tcs = new TaskCompletionSource<object>();
-            okButton ??= UIResources.Ok;
+            okButton ??= EnumeratorUIResources.Ok;
             this.Alert(message, () => tcs.TrySetResult(null), title, okButton);
             return tcs.Task;
         }
@@ -186,8 +186,8 @@ namespace WB.UI.Shared.Enumerator.CustomServices
         private void ConfirmImpl(string message, Action<bool> callback, string title, string okButton, string cancelButton, bool isHtml)
         {
             var userInteractionId = Guid.NewGuid();
-            okButton ??= UIResources.Ok;
-            cancelButton ??= UIResources.Cancel;
+            okButton ??= EnumeratorUIResources.Ok;
+            cancelButton ??= EnumeratorUIResources.Cancel;
 
             try
             {

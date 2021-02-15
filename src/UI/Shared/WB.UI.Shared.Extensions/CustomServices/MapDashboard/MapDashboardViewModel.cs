@@ -198,7 +198,7 @@ namespace WB.UI.Shared.Extensions.CustomServices.MapDashboard
                 interviewView.QuestionnaireTitle);
         }
 
-        private static readonly QuestionnaireItem AllQuestionnaireDefault = new QuestionnaireItem("", UIResources.MapDashboard_AllQuestionnaires);
+        private static readonly QuestionnaireItem AllQuestionnaireDefault = new QuestionnaireItem("", EnumeratorUIResources.MapDashboard_AllQuestionnaires);
 
         public MvxObservableCollection<QuestionnaireItem> questionnaires = new MvxObservableCollection<QuestionnaireItem>();
         public MvxObservableCollection<QuestionnaireItem> Questionnaires
@@ -509,9 +509,9 @@ namespace WB.UI.Shared.Extensions.CustomServices.MapDashboard
                 if (interview != null && interview.Status == InterviewStatus.Completed)
                 {
                     var isReopen = await userInteractionService.ConfirmAsync(
-                        EnumeratorUIResources.Dashboard_Reinitialize_Interview_Message,
-                        okButton: UIResources.Yes,
-                        cancelButton: UIResources.No);
+                       EnumeratorUIResources.Dashboard_Reinitialize_Interview_Message,
+                        okButton: EnumeratorUIResources.Yes,
+                        cancelButton: EnumeratorUIResources.No);
 
                     if (!isReopen)
                     {
@@ -569,7 +569,7 @@ namespace WB.UI.Shared.Extensions.CustomServices.MapDashboard
                             baseMap.BaseLayers[0].SpatialReference);
 
                         if (projectedArea!= null && !GeometryEngine.Intersects(baseMap.BaseLayers[0].FullExtent, projectedArea))
-                            this.userInteractionService.ShowToast(UIResources.AreaMap_MapIsOutOfVisibleBoundaries);
+                            this.userInteractionService.ShowToast(EnumeratorUIResources.AreaMap_MapIsOutOfVisibleBoundaries);
                     }
 
                     /*if (basemap?.BaseLayers[0]?.FullExtent != null)
@@ -607,7 +607,7 @@ namespace WB.UI.Shared.Extensions.CustomServices.MapDashboard
             catch (Exception e)
             {
                 logger.Error("Error on shapefile loading", e);
-                userInteractionService.ShowToast(UIResources.AreaMap_ErrorOnShapefileLoading);
+                userInteractionService.ShowToast(EnumeratorUIResources.AreaMap_ErrorOnShapefileLoading);
             }
         });
 
@@ -683,7 +683,7 @@ namespace WB.UI.Shared.Extensions.CustomServices.MapDashboard
         private void DataSourceOnStatusChanged(object sender, LocationDataSourceStatus e)
         {
             if(e == LocationDataSourceStatus.FailedToStart)
-                this.userInteractionService.ShowToast(UIResources.AreaMap_LocationDataSourceFailed);
+                this.userInteractionService.ShowToast(EnumeratorUIResources.AreaMap_LocationDataSourceFailed);
         }
 
         private void LocationDisplayOnLocationChanged(object sender, Location e)
@@ -699,7 +699,7 @@ namespace WB.UI.Shared.Extensions.CustomServices.MapDashboard
 
             if (!GeometryEngine.Contains(extent, point))
             {
-                this.userInteractionService.ShowToast(UIResources.AreaMap_LocationOutOfBoundaries);
+                this.userInteractionService.ShowToast(EnumeratorUIResources.AreaMap_LocationOutOfBoundaries);
             }
         }
 

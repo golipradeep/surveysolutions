@@ -63,7 +63,7 @@ namespace WB.Core.SharedKernels.Enumerator.Implementation.Services.Synchronizati
                         {
                             Title = EnumeratorUIResources.Synchronization_DownloadApplication,
                             Description = string.Format(
-                                EnumeratorUIResources.Synchronization_DownloadApplication_Description,
+                               EnumeratorUIResources.Synchronization_DownloadApplication_Description,
                                 receivedKilobytes.Humanize("0.00 MB"),
                                 totalKilobytes.Humanize("0.00 MB"),
                                 receivedKilobytes.Per(sw.Elapsed).Humanize("0.00"),

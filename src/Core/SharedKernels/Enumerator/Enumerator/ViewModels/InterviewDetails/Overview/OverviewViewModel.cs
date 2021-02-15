@@ -61,12 +61,12 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Overview
             var interviewEntities = identifyedEntities.Concat(interview.GetUnderlyingInterviewerEntities());
 
             this.Name = nameViewModel;
-            this.Name.InitAsStatic(UIResources.Interview_Overview_Name);
+            this.Name.InitAsStatic(EnumeratorUIResources.Interview_Overview_Name);
 
             var coverIdentity = new Identity(questionnaire.CoverPageSectionId, RosterVector.Empty);
             var coverSectionItem = questionnaire.IsCoverPageSupported
                 ? new OverviewSection(interview.GetGroup(coverIdentity))
-                : OverviewSection.Empty(UIResources.Interview_Cover_Screen_Title);
+                : OverviewSection.Empty(EnumeratorUIResources.Interview_Cover_Screen_Title);
 
             this.Items = new List<OverviewNode>() { coverSectionItem }
                 .Concat(interviewEntities.Where(x => interview.IsEnabled(x)).Select(x => BuildOverviewNode(x, interview, questionnaire, sections, navigationState)))

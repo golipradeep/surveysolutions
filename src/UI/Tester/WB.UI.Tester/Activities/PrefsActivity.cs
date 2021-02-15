@@ -64,14 +64,14 @@ namespace WB.UI.Tester.Activities
                 this.SetBooleanPreferenceTitleAndSummary(TesterSettings.ShowAnsweringTimeName, TesterUIResources.Prefs_ShowAnswerTime, TesterUIResources.Prefs_ShowAnswerTimeSummary, settings.ShowAnswerTime);
 
                 this.SetBooleanPreferenceTitleAndSummary(TesterSettings.ShowLocationOnMapParamName, 
-                    UIResources.Prefs_ShowLocationOnMap, 
-                    UIResources.Prefs_ShowLocationOnMapSummary,
+                    EnumeratorUIResources.Prefs_ShowLocationOnMap, 
+                    EnumeratorUIResources.Prefs_ShowLocationOnMapSummary,
                     settings.ShowLocationOnMap);
 
-                this.SetPreferenceTitleAndSummary("GpsDesiredAccuracy", UIResources.Prefs_GpsDesiredAccuracyTitle,
-                    string.Format(UIResources.Prefs_GpsDesiredAccuracySubTitle, settings.GpsDesiredAccuracy));
+                this.SetPreferenceTitleAndSummary("GpsDesiredAccuracy", EnumeratorUIResources.Prefs_GpsDesiredAccuracyTitle,
+                    string.Format(EnumeratorUIResources.Prefs_GpsDesiredAccuracySubTitle, settings.GpsDesiredAccuracy));
 
-                this.SetBooleanPreferenceTitleAndSummary(TesterSettings.VibrateOnErrorParameterName, UIResources.Prefs_VibrateOnErrorTitle, UIResources.Prefs_VibrateOnErrorSummary, settings.VibrateOnError);
+                this.SetBooleanPreferenceTitleAndSummary(TesterSettings.VibrateOnErrorParameterName, EnumeratorUIResources.Prefs_VibrateOnErrorTitle, EnumeratorUIResources.Prefs_VibrateOnErrorSummary, settings.VibrateOnError);
                 this.PreferenceScreen.RemovePreference(this.devSettingsCategory);
 
                 this.SetupVersionPreference();

@@ -139,7 +139,7 @@ namespace WB.Core.BoundedContexts.Supervisor.Synchronization
             {
                 Title = EnumeratorUIResources.Synchronization_DownloadApplication,
                 Description = string.Format(
-                    EnumeratorUIResources.Synchronization_DownloadApplication_Description,
+                   EnumeratorUIResources.Synchronization_DownloadApplication_Description,
                     receivedKilobytes.Humanize("0.00"),
                     totalKilobytes.Humanize("0.00"),
                     receivedKilobytes.Per(stopWatch.Elapsed).Humanize("0.00"),

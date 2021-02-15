@@ -101,10 +101,10 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
             get
             {
                 if (this.Mask.IsNullOrEmpty()) 
-                    return UIResources.TextQuestion_Hint;
+                    return EnumeratorUIResources.TextQuestion_Hint;
 
                 string maskHint = this.Mask.Replace('*', '_').Replace('#', '_').Replace('~', '_');
-                return UIResources.TextQuestion_MaskHint.FormatString(maskHint);
+                return EnumeratorUIResources.TextQuestion_MaskHint.FormatString(maskHint);
             }
         }
 
@@ -147,13 +147,13 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
 
             if (!this.Mask.IsNullOrEmpty() && !this.IsMaskedQuestionAnswered)
             {
-                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(UIResources.Interview_Question_Text_MaskError);
+                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(EnumeratorUIResources.Interview_Question_Text_MaskError);
                 return;
             }
 
             if(string.IsNullOrWhiteSpace(text))
             {
-                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(UIResources.Interview_Question_Text_Empty);
+                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(EnumeratorUIResources.Interview_Question_Text_Empty);
                 return;
             }
 

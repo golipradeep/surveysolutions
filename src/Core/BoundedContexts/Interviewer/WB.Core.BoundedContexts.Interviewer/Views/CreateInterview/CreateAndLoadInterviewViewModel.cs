@@ -168,7 +168,7 @@ namespace WB.Core.BoundedContexts.Interviewer.Views.CreateInterview
             catch (Exception e)
             {
                 logger.Error($"Failed to create interview {interviewId}. {e}", e);
-                await userInteractionService.AlertAsync(string.Format(EnumeratorUIResources.FailedToCreateInterview, e.Message), UIResources.Error);
+                await userInteractionService.AlertAsync(string.Format(EnumeratorUIResources.FailedToCreateInterview, e.Message), EnumeratorUIResources.Error);
             }
 
             return null;

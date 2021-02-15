@@ -145,7 +145,7 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels
             this.IsConnectionAbsent = countOfFailedPingAttemps == CountOfPingAttemps;
             this.ConnectionDescription = this.IsConnectionAbsent
                 ? this.ConnectionDescription =
-                    EnumeratorUIResources.Diagnostics_BandwidthTestConnectionToTheServerAbsent_Title
+                   EnumeratorUIResources.Diagnostics_BandwidthTestConnectionToTheServerAbsent_Title
                 : (countOfFailedPingAttemps == 0
                     ? EnumeratorUIResources.Diagnostics_BandwidthTestConnectionOK_Title
                     : EnumeratorUIResources.Diagnostics_BandwidthTestConnectionNotOK_Title);

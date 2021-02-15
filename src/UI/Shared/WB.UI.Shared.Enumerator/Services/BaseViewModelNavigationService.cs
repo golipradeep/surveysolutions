@@ -150,7 +150,7 @@ namespace WB.UI.Shared.Enumerator.Services
         }
 
         public void ShowWaitMessage()
-            =>  this.userInteractionService.ShowToast(UIResources.Messages_WaitPendingOperation);
+            =>  this.userInteractionService.ShowToast(EnumeratorUIResources.Messages_WaitPendingOperation);
 
         protected void RestartApp(Type splashScreenType)
         {

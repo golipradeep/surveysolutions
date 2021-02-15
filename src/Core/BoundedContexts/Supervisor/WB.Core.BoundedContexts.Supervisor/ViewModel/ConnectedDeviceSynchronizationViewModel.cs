@@ -44,10 +44,10 @@ namespace WB.Core.BoundedContexts.Supervisor.ViewModel
                     return EnumeratorUIResources.Synchronization_ReceivingAuditLog;
                 case SyncStage.AssignmentsSynchronization:
                     return syncProgressInfo.StageExtraInfo != null ?
-                        EnumeratorUIResources.Synchronization_Of_AssignmentsFormat.FormatString(
+                       EnumeratorUIResources.Synchronization_Of_AssignmentsFormat.FormatString(
                             syncProgressInfo.StageExtraInfo.GetOrNull("processedCount"),
                             syncProgressInfo.StageExtraInfo.GetOrNull("totalCount")) :
-                        EnumeratorUIResources.AssignmentsSynchronization;
+                       EnumeratorUIResources.AssignmentsSynchronization;
                 case SyncStage.UserAuthentication:
                     return EnumeratorUIResources.Synchronization_UserAuthentication_Title;
                 case SyncStage.Success:
@@ -71,10 +71,10 @@ namespace WB.Core.BoundedContexts.Supervisor.ViewModel
                     return EnumeratorUIResources.Synchronization_Fail_Title;
                 case SyncStage.UploadInterviews:
                     return string.Format(EnumeratorUIResources.Synchronization_Receiving_Title_Format,
-                        EnumeratorUIResources.Synchronization_Upload_CompletedAssignments_Text);
+                       EnumeratorUIResources.Synchronization_Upload_CompletedAssignments_Text);
                 case SyncStage.UploadingCalendarEvents:
                     return string.Format(EnumeratorUIResources.Synchronization_Receiving_Title_Format,
-                        EnumeratorUIResources.Synchronization_Upload_CalendarEvents_Text);
+                       EnumeratorUIResources.Synchronization_Upload_CalendarEvents_Text);
                 case SyncStage.CheckNewVersionOfApplication:
                     return EnumeratorUIResources.Synchronization_CheckNewVersionOfApplication;
                 case SyncStage.DownloadApplication:
@@ -135,14 +135,14 @@ namespace WB.Core.BoundedContexts.Supervisor.ViewModel
                         ? string.Format(EnumeratorUIResources.Synchronization_Upload_Description_Format,
                             syncProgressInfo.StageExtraInfo.GetOrNull("processedCount"),
                             syncProgressInfo.StageExtraInfo.GetOrNull("totalCount"),
-                            EnumeratorUIResources.Synchronization_Upload_Interviews_Text)
+                           EnumeratorUIResources.Synchronization_Upload_Interviews_Text)
                         : null;
                 case SyncStage.UploadingCalendarEvents:
                     return syncProgressInfo.StageExtraInfo != null
                         ? string.Format(EnumeratorUIResources.Synchronization_Upload_Description_Format,
                             syncProgressInfo.StageExtraInfo.GetOrNull("processedCount"),
                             syncProgressInfo.StageExtraInfo.GetOrNull("totalCount"),
-                            EnumeratorUIResources.Synchronization_Upload_CalendarEvents_Text)
+                           EnumeratorUIResources.Synchronization_Upload_CalendarEvents_Text)
                         : null;
                 case SyncStage.FailedUpgradeRequired:
                 case SyncStage.CheckNewVersionOfApplication:
@@ -162,21 +162,21 @@ namespace WB.Core.BoundedContexts.Supervisor.ViewModel
                         string.Format(EnumeratorUIResources.Synchronization_Download_Description_Format,
                             syncProgressInfo.StageExtraInfo.GetOrNull("processedCount"),
                             syncProgressInfo.StageExtraInfo.GetOrNull("totalCount"),
-                            EnumeratorUIResources.Synchronization_Interviews)
+                           EnumeratorUIResources.Synchronization_Interviews)
                         : EnumeratorUIResources.TransferringAssignments;
                 case SyncStage.DownloadingCalendarEvents:
                     return syncProgressInfo.StageExtraInfo != null ?
                         string.Format(EnumeratorUIResources.Synchronization_Download_Description_Format,
                             syncProgressInfo.StageExtraInfo.GetOrNull("processedCount"),
                             syncProgressInfo.StageExtraInfo.GetOrNull("totalCount"),
-                            EnumeratorUIResources.Synchronization_Upload_CalendarEvents_Text)
+                           EnumeratorUIResources.Synchronization_Upload_CalendarEvents_Text)
                         : EnumeratorUIResources.TransferringCalendarEvents;
                 case SyncStage.UpdatingQuestionnaires:
                     return syncProgressInfo.StageExtraInfo != null ?
                         string.Format(EnumeratorUIResources.Synchronization_Download_Description_Format,
                             syncProgressInfo.StageExtraInfo.GetOrNull("processedCount"),
                             syncProgressInfo.StageExtraInfo.GetOrNull("totalCount"),
-                            EnumeratorUIResources.Synchronization_Questionnaires)
+                           EnumeratorUIResources.Synchronization_Questionnaires)
                         : EnumeratorUIResources.UpdatingQuestionnaires;
 
                 case SyncStage.Unknown:

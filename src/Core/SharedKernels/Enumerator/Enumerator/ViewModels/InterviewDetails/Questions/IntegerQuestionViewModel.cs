@@ -79,7 +79,7 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
                     var amountOfRostersToRemove = this.previousAnswer;
                     if (this.previousAnswer > 0)
                     {
-                        var message = string.Format(UIResources.Interview_Question_NumberRosterRemoveConfirm, amountOfRostersToRemove);
+                        var message = string.Format(EnumeratorUIResources.Interview_Question_NumberRosterRemoveConfirm, amountOfRostersToRemove);
                         if (!(await this.userInteractionService.ConfirmAsync(message)))
                         {
                             this.Answer = this.previousAnswer;
@@ -201,14 +201,14 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
         {
             if (this.Answer == null)
             {
-                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(UIResources
+                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(EnumeratorUIResources
                     .Interview_Question_Integer_EmptyValueError);
                 return;
             }
 
             if (this.Answer > int.MaxValue || this.Answer < int.MinValue)
             {
-                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(UIResources
+                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(EnumeratorUIResources
                     .Interview_Question_Integer_ParsingError);
                 return;
             }
@@ -235,7 +235,7 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
 
             if (ProtectedAnswer.HasValue && answeredOrSelectedValue < protectedAnswer)
             {
-                var message = string.Format(UIResources.Interview_Questions_Integer_ProtectedValue,
+                var message = string.Format(EnumeratorUIResources.Interview_Questions_Integer_ProtectedValue,
                     ProtectedAnswer);
                 await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(message);
                 return;
@@ -245,7 +245,7 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
             {
                 if (!isSpecialValueSelected && answeredOrSelectedValue < 0)
                 {
-                    var message = string.Format(UIResources.Interview_Question_Integer_NegativeRosterSizeAnswer,
+                    var message = string.Format(EnumeratorUIResources.Interview_Question_Integer_NegativeRosterSizeAnswer,
                         answeredOrSelectedValue);
                     await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(message);
                     return;
@@ -253,7 +253,7 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
 
                 if (answeredOrSelectedValue > this.answerMaxValue)
                 {
-                    var message = string.Format(UIResources.Interview_Question_Integer_RosterSizeAnswerMoreThanMaxValue,
+                    var message = string.Format(EnumeratorUIResources.Interview_Question_Integer_RosterSizeAnswerMoreThanMaxValue,
                         answeredOrSelectedValue, this.answerMaxValue);
                     await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(message);
                     return;
@@ -264,7 +264,7 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
                     var amountOfRostersToRemove = this.previousAnswer - Math.Max(answeredOrSelectedValue.Value, 0);
                     if (amountOfRostersToRemove > 0)
                     {
-                        var message = string.Format(UIResources.Interview_Question_NumberRosterRemoveConfirm,
+                        var message = string.Format(EnumeratorUIResources.Interview_Question_NumberRosterRemoveConfirm,
                             amountOfRostersToRemove);
                         if (!await this.userInteractionService.ConfirmAsync(message))
                         {

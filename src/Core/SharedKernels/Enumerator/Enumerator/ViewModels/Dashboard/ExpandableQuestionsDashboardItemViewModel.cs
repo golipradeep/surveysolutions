@@ -137,7 +137,7 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.Dashboard
                 if (CalendarEventStart.HasValue)
                 {
                     var calendarString = FormatDateTimeString(
-                        EnumeratorUIResources.Dashboard_ShowCalendarEvent, 
+                       EnumeratorUIResources.Dashboard_ShowCalendarEvent, 
                         CalendarEventStart.Value.ToDateTimeUtc());
                     string separatorVisit = !string.IsNullOrEmpty(CalendarEventComment) 
                         ? Environment.NewLine : string.Empty;

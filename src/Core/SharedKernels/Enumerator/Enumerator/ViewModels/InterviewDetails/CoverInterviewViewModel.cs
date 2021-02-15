@@ -104,7 +104,7 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails
             if (questionnaire.IsCoverPageSupported)
                 this.Name.Init(interviewId, new Identity(questionnaire.CoverPageSectionId, RosterVector.Empty));
             else
-                this.Name.InitAsStatic(UIResources.Interview_Cover_Screen_Title);
+                this.Name.InitAsStatic(EnumeratorUIResources.Interview_Cover_Screen_Title);
             
             this.InterviewState.Init(interviewId, null);
 
@@ -130,19 +130,19 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails
             this.HasPrefilledEntities = this.PrefilledReadOnlyEntities.Any() || this.PrefilledEditableEntities.Any();
 
             var interviewKey = interview.GetInterviewKey()?.ToString();
-            this.InterviewKey = string.IsNullOrEmpty(interviewKey) ? null : string.Format(UIResources.InterviewKey, interviewKey);
+            this.InterviewKey = string.IsNullOrEmpty(interviewKey) ? null : string.Format(EnumeratorUIResources.InterviewKey, interviewKey);
             
             var assignmentId = interview.GetAssignmentId();
-            this.AssignmentId = !assignmentId.HasValue ? null : string.Format(UIResources.AssignmentN, assignmentId);
+            this.AssignmentId = !assignmentId.HasValue ? null : string.Format(EnumeratorUIResources.AssignmentN, assignmentId);
 
             this.CountOfCommentedQuestions = interview.GetCommentedBySupervisorQuestionsVisibleToInterviewer().Count();
             this.CommentedEntities = entitiesListViewModelFactory.GetEntitiesWithComments(interviewId, navigationState).ToList();
 
             this.CommentedEntitiesDescription = CountOfCommentedQuestions == 0
-                ? UIResources.Interview_Cover_Supervisor_Comments_does_not_exists
+                ? EnumeratorUIResources.Interview_Cover_Supervisor_Comments_does_not_exists
                 : CommentedEntities.Count == this.CountOfCommentedQuestions
-                    ? UIResources.Interview_Cover_Questions_With_Comments
-                    : string.Format(UIResources.Interview_Cover_First_n_Questions_With_Comments, entitiesListViewModelFactory.MaxNumberOfEntities);
+                    ? EnumeratorUIResources.Interview_Cover_Questions_With_Comments
+                    : string.Format(EnumeratorUIResources.Interview_Cover_First_n_Questions_With_Comments, entitiesListViewModelFactory.MaxNumberOfEntities);
 
             this.DoesShowCommentsBlock = CountOfCommentedQuestions > 0 || interview.WasCompleted || interview.WasRejected;
 

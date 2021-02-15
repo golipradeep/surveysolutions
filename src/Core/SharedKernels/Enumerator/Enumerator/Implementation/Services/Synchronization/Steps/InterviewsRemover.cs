@@ -33,7 +33,7 @@ namespace WB.Core.SharedKernels.Enumerator.Implementation.Services.Synchronizati
                     Description = string.Format(EnumeratorUIResources.Synchronization_Download_Description_Format,
                         statistics.DeletedInterviewsCount + 1,
                         interviewIds.Length,
-                        EnumeratorUIResources.Synchronization_Interviews),
+                       EnumeratorUIResources.Synchronization_Interviews),
                     Stage = SyncStage.UpdatingAssignments,
                     StageExtraInfo = new Dictionary<string, string>
                     {

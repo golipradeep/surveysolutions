@@ -37,7 +37,7 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
                 var errorViewModel = this.dynamicTextViewModelFactory.CreateErrorMessage();
                 // default test if error message is empty
                 var errorText = string.IsNullOrWhiteSpace(error)
-                    ? UIResources.Error
+                    ? EnumeratorUIResources.Error
                     : error;
                 errorViewModel.InitializeNavigation(interviewId, identity, navigationState);
 

@@ -137,11 +137,11 @@ namespace WB.UI.Interviewer.ViewModel
 
                         if (missingPermissionsException.PermissionType == typeof(MicrophonePermission))
                         {
-                            this.userInteractionService.ShowToast(UIResources.MissingPermissions_Microphone);
+                            this.userInteractionService.ShowToast(EnumeratorUIResources.MissingPermissions_Microphone);
                         }
                         else if (missingPermissionsException.PermissionType == typeof(StoragePermission))
                         {
-                            this.userInteractionService.ShowToast(UIResources.MissingPermissions_Storage);
+                            this.userInteractionService.ShowToast(EnumeratorUIResources.MissingPermissions_Storage);
                         }
                         else
                         {

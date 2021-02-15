@@ -91,7 +91,7 @@ namespace WB.UI.Shared.Enumerator.Activities
         {
             if (!ViewModel.EnumeratorSettings.ShowAnswerTime) return;
 
-            var message = string.Format(UIResources.AnswerRecordedMsg,
+            var message = string.Format(EnumeratorUIResources.AnswerRecordedMsg,
                 msg.Elapsed.Humanize(maxUnit: TimeUnit.Minute));
 
             toast?.Cancel();

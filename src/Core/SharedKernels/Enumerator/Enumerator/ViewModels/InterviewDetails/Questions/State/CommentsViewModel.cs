@@ -124,7 +124,7 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
 
             var onPreviousAnswer = comment.CommentOnPreviousAnswer;
             if (onPreviousAnswer)
-                commentCaption = $"{commentCaption} ({UIResources.Interview_Comment_OnPreviousAnswer})"; 
+                commentCaption = $"{commentCaption} ({ EnumeratorUIResources.Interview_Comment_OnPreviousAnswer})"; 
 
             CommentState commentState;
             if (comment.Resolved)
@@ -152,19 +152,19 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
 
             if (isCurrentUserComment)
             {
-                return UIResources.Interview_Comment_Interviewer_Caption;
+                return EnumeratorUIResources.Interview_Comment_Interviewer_Caption;
             }
 
             switch (comment.UserRole)
             {
                 case UserRoles.Headquarter:
-                    return UIResources.Interview_Headquarters_Comment_Caption;
+                    return EnumeratorUIResources.Interview_Headquarters_Comment_Caption;
                 case UserRoles.Supervisor:
-                    return UIResources.Interview_Supervisor_Comment_Caption;
+                    return EnumeratorUIResources.Interview_Supervisor_Comment_Caption;
                 case UserRoles.Interviewer:
-                    return UIResources.Interview_Interviewer_Comment_Caption;
+                    return EnumeratorUIResources.Interview_Interviewer_Comment_Caption;
                 default:
-                    return UIResources.Interview_Other_Comment_Caption;
+                    return EnumeratorUIResources.Interview_Other_Comment_Caption;
             }
         }
 
@@ -195,11 +195,11 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
             {
                 if (value)
                 {
-                    ShowResolvedCommentsBtnText = UIResources.Interview_Question_HideResolvedComments;
+                    ShowResolvedCommentsBtnText = EnumeratorUIResources.Interview_Question_HideResolvedComments;
                 }
                 else
                 {
-                    ShowResolvedCommentsBtnText = UIResources.Interview_Question_ShowResolvedComments;
+                    ShowResolvedCommentsBtnText = EnumeratorUIResources.Interview_Question_ShowResolvedComments;
                 }
 
                 UpdateCommentsFromInterview(value);

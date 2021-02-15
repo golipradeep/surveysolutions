@@ -192,7 +192,7 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
 
         private void SetAnswer(TimeSpan duration)
         {
-            this.Answer = string.Format(UIResources.AudioQuestion_DurationFormat,
+            this.Answer = string.Format(EnumeratorUIResources.AudioQuestion_DurationFormat,
                 duration.Humanize(maxUnit: TimeUnit.Minute, minUnit: TimeUnit.Second));
             
             this.CanBePlayed = this.audioFileStorage.GetInterviewBinaryData(this.interviewId, GetAudioFileName()) != null;
@@ -217,12 +217,12 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
             }
             catch (MissingPermissionsException e) when (e.PermissionType == typeof(MicrophonePermission))
             {
-                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(UIResources
+                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(EnumeratorUIResources
                     .MissingPermissions_Microphone);
             }
             catch (MissingPermissionsException e) when (e.PermissionType == typeof(StoragePermission))
             {
-                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(UIResources
+                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(EnumeratorUIResources
                     .MissingPermissions_Storage);
             }
             catch (MissingPermissionsException e)
@@ -231,11 +231,11 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
             }
             catch (AudioException e) when (e.Type == AudioExceptionType.Io)
             {
-                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(UIResources.Audio_Io_Exception_Message);
+                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(EnumeratorUIResources.Audio_Io_Exception_Message);
             }
             catch (AudioException e) when (e.Type == AudioExceptionType.Unhandled)
             {
-                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(UIResources.Audio_Unhandled_Exception_Message);
+                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(EnumeratorUIResources.Audio_Unhandled_Exception_Message);
             }
         }
 

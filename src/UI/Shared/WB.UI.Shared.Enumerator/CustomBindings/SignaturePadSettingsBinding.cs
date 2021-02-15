@@ -13,8 +13,8 @@ namespace WB.UI.Shared.Enumerator.CustomBindings
         protected override void SetValueToView(SignaturePadView control, object value)
         {
             control.SignaturePromptText = string.Empty;
-            control.CaptionText = UIResources.Interview_SignatureSignHere;
-            control.ClearLabelText = UIResources.Interview_SignatureClear;
+            control.CaptionText = EnumeratorUIResources.Interview_SignatureSignHere;
+            control.ClearLabelText = EnumeratorUIResources.Interview_SignatureClear;
         }
 
         public override MvxBindingMode DefaultMode => MvxBindingMode.OneTime;

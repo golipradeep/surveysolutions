@@ -150,7 +150,7 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
         private async Task ComboboxViewModel_OnShowErrorIfNoAnswer(object sender, EventArgs e)
         {
             if (this.comboboxViewModel.FilterText == string.Empty && this.questionState.IsAnswered)
-                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(string.Format(UIResources.Interview_Question_Filter_MatchError, string.Empty));
+                await this.QuestionState.Validity.MarkAnswerAsNotSavedWithMessage(string.Format(EnumeratorUIResources.Interview_Question_Filter_MatchError, string.Empty));
         }
 
         protected async Task RemoveAnswerAsync()

@@ -119,7 +119,7 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
 
             if (this.isRosterSizeQuestion )
             {
-                var message = UIResources.Interview_Questions_RemoveRowFromRosterMessage.FormatString(listItem.Title);
+                var message = EnumeratorUIResources.Interview_Questions_RemoveRowFromRosterMessage.FormatString(listItem.Title);
                 if (!(await this.userInteractionService.ConfirmAsync(message)))
                 {
                     return;
@@ -167,7 +167,7 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
 
             if (answerViewModels.Any(x => string.IsNullOrWhiteSpace(x.Title)))
             {
-                await this.questionState.Validity.MarkAnswerAsNotSavedWithMessage(UIResources.Interview_Question_List_Empty_Values_Are_Not_Allowed);
+                await this.questionState.Validity.MarkAnswerAsNotSavedWithMessage(EnumeratorUIResources.Interview_Question_List_Empty_Values_Are_Not_Allowed);
                 return;
             }
 

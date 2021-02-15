@@ -90,7 +90,7 @@ namespace WB.Core.SharedKernels.Enumerator.Utils
                         case HttpStatusCode.UpgradeRequired:
                             var exception = new SynchronizationException(
                                 SynchronizationExceptionType.UpgradeRequired,
-                                EnumeratorUIResources.UpgradeRequired);
+                               EnumeratorUIResources.UpgradeRequired);
                             if (restException.Data.Contains("target-version"))
                                 exception.Data["target-version"] = restException.Data["target-version"];
                             return exception;
@@ -117,12 +117,12 @@ namespace WB.Core.SharedKernels.Enumerator.Utils
                             {
                                 exceptionType = SynchronizationExceptionType.UserLinkedToAnotherDevice;
                                 exceptionMessage =
-                                    EnumeratorUIResources.Synchronization_UserLinkedToAnotherDevice_Title;
+                                   EnumeratorUIResources.Synchronization_UserLinkedToAnotherDevice_Title;
                             }else if(restException.Message.Contains("Workspace is disabled"))
                             {
                                 exceptionType = SynchronizationExceptionType.WorkspaceDisabled;
                                 exceptionMessage =
-                                    EnumeratorUIResources.Synchronization_WorkspaceDisabled;
+                                   EnumeratorUIResources.Synchronization_WorkspaceDisabled;
                             }
                             else
                             {

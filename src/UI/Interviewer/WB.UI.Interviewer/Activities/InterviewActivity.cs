@@ -24,27 +24,27 @@ namespace WB.UI.Interviewer.Activities
         {
             {
                 Resource.Id.menu_dashboard,
-                EnumeratorUIResources.MenuItem_Title_Dashboard,
+               EnumeratorUIResources.MenuItem_Title_Dashboard,
                 this.ViewModel.NavigateToDashboardCommand
             },
             {
                 Resource.Id.menu_signout,
-                EnumeratorUIResources.MenuItem_Title_SignOut,
+               EnumeratorUIResources.MenuItem_Title_SignOut,
                 this.ViewModel.SignOutCommand
             },
             {
                 Resource.Id.menu_diagnostics,
-                EnumeratorUIResources.MenuItem_Title_Diagnostics,
+               EnumeratorUIResources.MenuItem_Title_Diagnostics,
                 this.ViewModel.NavigateToDiagnosticsPageCommand
             },
             {
                 Resource.Id.menu_maps,
-                EnumeratorUIResources.MenuItem_Title_Maps,
+               EnumeratorUIResources.MenuItem_Title_Maps,
                 this.ViewModel.NavigateToMapsCommand
             },
             {
                 Resource.Id.interview_language,
-                EnumeratorUIResources.MenuItem_Title_Language
+               EnumeratorUIResources.MenuItem_Title_Language
             },
             {
                 Resource.Id.interview_language_original,

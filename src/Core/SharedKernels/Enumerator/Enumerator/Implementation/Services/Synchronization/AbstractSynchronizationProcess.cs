@@ -540,7 +540,7 @@ namespace WB.Core.SharedKernels.Enumerator.Implementation.Services.Synchronizati
 
             return this.userInteractionService.ConfirmWithTextInputAsync(
                 message,
-                okButton: UIResources.LoginText,
+                okButton: EnumeratorUIResources.LoginText,
                 cancelButton: EnumeratorUIResources.Synchronization_Cancel,
                 isTextInputPassword: true);
         }

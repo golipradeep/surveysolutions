@@ -81,7 +81,7 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
 
             if (this.userInteraction.HasPendingUserInteractions) return false;
 
-            return await this.userInteraction.ConfirmAsync(string.Format(UIResources.Interview_Questions_RemoveRowFromRosterMessage, $"<b>'{this.Title}'</b>"));
+            return await this.userInteraction.ConfirmAsync(string.Format(EnumeratorUIResources.Interview_Questions_RemoveRowFromRosterMessage, $"<b>'{this.Title}'</b>"));
         }
 
         public override bool IsAnswered() => this.Checked || this.NoSelected;

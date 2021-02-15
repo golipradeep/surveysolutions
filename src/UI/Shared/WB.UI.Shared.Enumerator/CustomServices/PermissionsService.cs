@@ -57,7 +57,7 @@ namespace WB.UI.Shared.Enumerator.CustomServices
                         if (!Application.Context.PackageManager.CanRequestPackageInstalls())
                         {
                             // set update error. This message will be displayed on user UI
-                            tcs.SetException(new System.Exception(UIResources.ErrorMessage_PermissionForUnkownSourcesRequired));
+                            tcs.SetException(new System.Exception(EnumeratorUIResources.ErrorMessage_PermissionForUnkownSourcesRequired));
                         }
                         else
                         {

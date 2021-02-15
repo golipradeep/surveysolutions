@@ -82,14 +82,14 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
             {
                 if (isInvalidEntity && !wasError)
                 {
-                    var validationMessages = interview.GetFailedValidationMessages(this.Identity, UIResources.Error);
+                    var validationMessages = interview.GetFailedValidationMessages(this.Identity, EnumeratorUIResources.Error);
 
                     this.Error.Caption = String.Empty;
                     this.Error.ChangeValidationErrors(validationMessages, this.interviewId, this.Identity, this.navigationState);
                 }
                 else if (wasError)
                 {
-                    this.Error.Caption = UIResources.Validity_NotAnswered_InterviewException_ErrorCaption;
+                    this.Error.Caption = EnumeratorUIResources.Validity_NotAnswered_InterviewException_ErrorCaption;
                     this.Error.ChangeValidationErrors(this.exceptionErrorMessageFromViewModel.ToEnumerable(), this.interviewId, this.Identity, this.navigationState);
                 }
 
@@ -152,7 +152,7 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
                 switch (interviewException.ExceptionType)
                 {
                     case InterviewDomainExceptionType.InterviewSizeLimitReached:
-                        this.exceptionErrorMessageFromViewModel = UIResources.Validity_InterviewSizeLimitReached;
+                        this.exceptionErrorMessageFromViewModel = EnumeratorUIResources.Validity_InterviewSizeLimitReached;
                         break;
                     default:
                         this.exceptionErrorMessageFromViewModel = interviewException.Message;
@@ -167,8 +167,8 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Questions
                 {
                     await mainThreadDispatcher.ExecuteOnMainThreadAsync(() =>
                     {
-                        this.Error.Caption = UIResources.Validity_NotAnswered_InterviewException_ErrorCaption;
-                        this.Error.ChangeValidationErrors(UIResources.Validity_QuestionDoesntExist.ToEnumerable(), this.interviewId, this.Identity, this.navigationState);
+                        this.Error.Caption = EnumeratorUIResources.Validity_NotAnswered_InterviewException_ErrorCaption;
+                        this.Error.ChangeValidationErrors(EnumeratorUIResources.Validity_QuestionDoesntExist.ToEnumerable(), this.interviewId, this.Identity, this.navigationState);
                         this.IsInvalid = true;
                     });
                 }

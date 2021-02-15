@@ -87,7 +87,7 @@ namespace WB.Core.SharedKernels.Enumerator.Views
             }
             catch (MissingPermissionsException)
             {
-                this.userInteractionService.ShowToast(UIResources.MissingPermissions_Storage);
+                this.userInteractionService.ShowToast(EnumeratorUIResources.MissingPermissions_Storage);
                 return;
             }
 

@@ -141,7 +141,7 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels
                     else
                     {
                         this.CheckNewVersionResult =
-                            EnumeratorUIResources.Diagnostics_YouHaveTheLatestVersionOfApplication;
+                           EnumeratorUIResources.Diagnostics_YouHaveTheLatestVersionOfApplication;
                     }
                 }
             }

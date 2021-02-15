@@ -105,7 +105,7 @@ namespace WB.Core.SharedKernels.Enumerator.Implementation.Services.Synchronizati
                         Description = string.Format(EnumeratorUIResources.Synchronization_Download_Description_Format,
                             Context.Statistics.SuccessfullyDownloadedCalendarEventsCount, 
                             calendarEventsIds.Count,
-                            EnumeratorUIResources.Synchronization_Upload_CalendarEvents_Text),
+                           EnumeratorUIResources.Synchronization_Upload_CalendarEvents_Text),
                         Stage = SyncStage.DownloadingCalendarEvents,
                         StageExtraInfo = new Dictionary<string, string>()
                         {

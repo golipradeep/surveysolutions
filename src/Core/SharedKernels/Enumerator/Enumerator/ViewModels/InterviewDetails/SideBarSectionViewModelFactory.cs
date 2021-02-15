@@ -25,7 +25,7 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails
         public virtual ISideBarItem BuildCompleteItem(NavigationState navigationState, string interviewId)
         {
             var sideBarItem = this.serviceLocator.GetInstance<SideBarCompleteSectionViewModel>();
-            sideBarItem.Init(navigationState, interviewId, UIResources.Interview_Complete_Screen_Title);
+            sideBarItem.Init(navigationState, interviewId, EnumeratorUIResources.Interview_Complete_Screen_Title);
             return sideBarItem;
         }
 

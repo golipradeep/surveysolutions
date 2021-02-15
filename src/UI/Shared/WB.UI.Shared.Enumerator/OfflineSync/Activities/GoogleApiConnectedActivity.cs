@@ -57,13 +57,13 @@ namespace WB.UI.Shared.Enumerator.OfflineSync.Activities
                     () =>
                     {
                         this.Finish();
-                        ViewModel.UserInteractionService.ShowToast(UIResources.OfflineSync_InstallPlayServices);
+                        ViewModel.UserInteractionService.ShowToast(EnumeratorUIResources.OfflineSync_InstallPlayServices);
                     });
             }
             else
             {
                 this.Finish();
-                Toast.MakeText(this, UIResources.OfflineSync_DeviceNotSupported, ToastLength.Long).Show();
+                Toast.MakeText(this, EnumeratorUIResources.OfflineSync_DeviceNotSupported, ToastLength.Long).Show();
             }
 
             return false;

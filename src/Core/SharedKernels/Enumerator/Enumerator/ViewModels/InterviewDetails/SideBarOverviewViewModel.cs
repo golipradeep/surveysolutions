@@ -32,7 +32,7 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails
         {
             this.navigation = navigationState;
             this.SideBarGroupState.Init(interviewId, null);
-            this.Title.InitAsStatic(UIResources.Interview_Overview);
+            this.Title.InitAsStatic(EnumeratorUIResources.Interview_Overview);
 
             navigationState.ScreenChanged += OnScreenChanged;
 

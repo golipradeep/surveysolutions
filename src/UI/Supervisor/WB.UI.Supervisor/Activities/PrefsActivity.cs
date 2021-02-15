@@ -40,11 +40,11 @@ namespace WB.UI.Supervisor.Activities
                 var settings = Mvx.IoCProvider.Resolve<ISupervisorSettings>();
 
                 this.SetPreferenceTitleAndSummary("interview_settings_category",
-                    EnumeratorUIResources.Prefs_InterviewSettings, string.Empty);
+                   EnumeratorUIResources.Prefs_InterviewSettings, string.Empty);
                 this.SetPreferenceTitleAndSummary("about_category", EnumeratorUIResources.Prefs_AboutApplication,
                     string.Empty);
                 this.SetPreferenceTitleAndSummary("connection_settings_category",
-                    EnumeratorUIResources.Prefs_ConnectionSettings, string.Empty);
+                   EnumeratorUIResources.Prefs_ConnectionSettings, string.Empty);
 
                 this.SetPreferenceTitleAndSummary("version", EnumeratorUIResources.Prefs_ApplicationVersionTitle,
                     settings.GetApplicationVersionName());
@@ -100,26 +100,26 @@ namespace WB.UI.Supervisor.Activities
                 this.SetPreferenceTitleAndSummary(SettingsNames.Endpoint, EnumeratorUIResources.Prefs_EndpointTitle,
                     settings.Endpoint, settings.Endpoint);
                 this.SetPreferenceTitleAndSummary(SettingsNames.HttpResponseTimeout,
-                    EnumeratorUIResources.Prefs_HttpResponseTimeoutTitle,
-                    EnumeratorUIResources.Prefs_HttpResponseTimeoutSummary,
+                   EnumeratorUIResources.Prefs_HttpResponseTimeoutTitle,
+                   EnumeratorUIResources.Prefs_HttpResponseTimeoutSummary,
                     settings.Timeout.TotalSeconds.ToString(CultureInfo.InvariantCulture));
                 this.SetPreferenceTitleAndSummary(SettingsNames.BufferSize,
-                    EnumeratorUIResources.Prefs_BufferSizeTitle,
-                    EnumeratorUIResources.Prefs_BufferSizeSummary, settings.BufferSize.ToString());
+                   EnumeratorUIResources.Prefs_BufferSizeTitle,
+                   EnumeratorUIResources.Prefs_BufferSizeSummary, settings.BufferSize.ToString());
 
 
                 this.SetPreferenceTitleAndSummary(SettingsNames.EventChunkSize,
-                    EnumeratorUIResources.Prefs_EventChunkSizeTitle,
-                    EnumeratorUIResources.Prefs_EventChunkSizeSummary, settings.EventChunkSize.ToString());
+                   EnumeratorUIResources.Prefs_EventChunkSizeTitle,
+                   EnumeratorUIResources.Prefs_EventChunkSizeSummary, settings.EventChunkSize.ToString());
 
                 this.SetBooleanPreferenceTitleAndSummary(SettingsNames.ShowLocationOnMap,
-                    UIResources.Prefs_ShowLocationOnMap,
-                    UIResources.Prefs_ShowLocationOnMapSummary,
+                    EnumeratorUIResources.Prefs_ShowLocationOnMap,
+                    EnumeratorUIResources.Prefs_ShowLocationOnMapSummary,
                     settings.ShowLocationOnMap);
 
                 this.SetBooleanPreferenceTitleAndSummary(SettingsNames.DownloadUpdatesForInterviewerApp,
-                    UIResources.Prefs_DownloadUpdatesForInterviewerApp,
-                    UIResources.Prefs_DownloadUpdatesForInterviewerAppSummary,
+                    EnumeratorUIResources.Prefs_DownloadUpdatesForInterviewerApp,
+                    EnumeratorUIResources.Prefs_DownloadUpdatesForInterviewerAppSummary,
                     settings.DownloadUpdatesForInterviewerApp);
             }
 

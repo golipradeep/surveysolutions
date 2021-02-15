@@ -47,8 +47,8 @@ namespace WB.Core.BoundedContexts.Interviewer.Views
             var interview = this.interviewRepository.GetOrThrow(interviewId);
             var interviewKey = interview.GetInterviewKey()?.ToString();
             this.CompleteScreenTitle = string.IsNullOrEmpty(interviewKey)
-                ? UIResources.Interview_Complete_Screen_Description
-                : string.Format(UIResources.Interview_Complete_Screen_DescriptionWithInterviewKey, interviewKey);
+                ? EnumeratorUIResources.Interview_Complete_Screen_Description
+                : string.Format(EnumeratorUIResources.Interview_Complete_Screen_DescriptionWithInterviewKey, interviewKey);
             
             if (string.IsNullOrEmpty(this.Comment))
             {

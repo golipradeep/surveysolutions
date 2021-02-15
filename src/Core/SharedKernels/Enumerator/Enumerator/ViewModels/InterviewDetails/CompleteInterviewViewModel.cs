@@ -64,9 +64,9 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails
             this.interviewId = Guid.Parse(interviewId);
 
             this.InterviewState.Init(interviewId, null);
-            this.Name.InitAsStatic(UIResources.Interview_Complete_Screen_Title);
+            this.Name.InitAsStatic(EnumeratorUIResources.Interview_Complete_Screen_Title);
 
-            this.CompleteScreenTitle = UIResources.Interview_Complete_Screen_Description;
+            this.CompleteScreenTitle = EnumeratorUIResources.Interview_Complete_Screen_Description;
 
             var questionsCount = InterviewState.QuestionsCount;
             this.AnsweredCount = InterviewState.AnsweredQuestionsCount;
@@ -77,12 +77,12 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails
                     this.entitiesListViewModelFactory.GetEntitiesWithErrors(interviewId, navigationState).ToList();
 
             this.EntitiesWithErrorsDescription = EntitiesWithErrors.Count < this.ErrorsCount
-                ? string.Format(UIResources.Interview_Complete_First_n_Entities_With_Errors,
+                ? string.Format(EnumeratorUIResources.Interview_Complete_First_n_Entities_With_Errors,
                     this.entitiesListViewModelFactory.MaxNumberOfEntities)
-                : UIResources.Interview_Complete_Entities_With_Errors;
+                : EnumeratorUIResources.Interview_Complete_Entities_With_Errors;
 
             this.Comment = lastCompletionComments.Get(this.interviewId);
-            this.CommentLabel = UIResources.Interview_Complete_Note_For_Supervisor;
+            this.CommentLabel = EnumeratorUIResources.Interview_Complete_Note_For_Supervisor;
         }
 
         public int AnsweredCount { get; set; }

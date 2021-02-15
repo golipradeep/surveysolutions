@@ -84,8 +84,8 @@ namespace WB.Core.BoundedContexts.Supervisor.ViewModel
 
             var interviewKey = interview.GetInterviewKey()?.ToString();
             this.CompleteScreenTitle = string.IsNullOrEmpty(interviewKey)
-                ? UIResources.Interview_Complete_Screen_Description
-                : string.Format(UIResources.Interview_Complete_Screen_DescriptionWithInterviewKey, interviewKey);
+                ? EnumeratorUIResources.Interview_Complete_Screen_Description
+                : string.Format(EnumeratorUIResources.Interview_Complete_Screen_DescriptionWithInterviewKey, interviewKey);
 
             base.AnsweredCount = interview.CountActiveAnsweredQuestionsInInterviewForSupervisor();
             base.ErrorsCount = interview.CountInvalidEntitiesInInterviewForSupervisor();
@@ -105,8 +105,8 @@ namespace WB.Core.BoundedContexts.Supervisor.ViewModel
                     {
                         var approveConfirmed = await userInteractionService.ConfirmAsync(
                             SupervisorUIResources.Confirm_Approve_Synchronized_Interview_Message,
-                            okButton: UIResources.Yes,
-                            cancelButton: UIResources.No);
+                            okButton: EnumeratorUIResources.Yes,
+                            cancelButton: EnumeratorUIResources.No);
 
                         if (!approveConfirmed)
                         {

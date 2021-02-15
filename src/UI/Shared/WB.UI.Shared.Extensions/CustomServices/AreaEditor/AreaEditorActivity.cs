@@ -61,7 +61,7 @@ namespace WB.UI.Shared.Extensions.CustomServices.AreaEditor
         {
             this.MenuInflater.Inflate(Resource.Menu.area_editor, menu);
 
-            menu.LocalizeMenuItem(Resource.Id.map_editor_exit, UIResources.MenuItem_Title_AreaCancelEdit);
+            menu.LocalizeMenuItem(Resource.Id.map_editor_exit, EnumeratorUIResources.MenuItem_Title_AreaCancelEdit);
 
             return base.OnCreateOptionsMenu(menu);
         }

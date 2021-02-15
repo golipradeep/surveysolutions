@@ -51,11 +51,11 @@ namespace WB.Core.SharedKernels.Enumerator.Implementation.Services.Synchronizati
                 Context.Progress.Report(new SyncProgressInfo
                 {
                     Title = string.Format(EnumeratorUIResources.Synchronization_Upload_Title_Format,
-                        EnumeratorUIResources.Synchronization_Upload_CalendarEvents_Text),
+                       EnumeratorUIResources.Synchronization_Upload_CalendarEvents_Text),
                     Description = string.Format(EnumeratorUIResources.Synchronization_Upload_Description_Format,
                         Context.Statistics.SuccessfullyUploadedCalendarEventsCount, 
                         calendarEvents.Count,
-                        EnumeratorUIResources.Synchronization_Upload_CalendarEvents_Text),
+                       EnumeratorUIResources.Synchronization_Upload_CalendarEvents_Text),
                     Status = SynchronizationStatus.Upload,
                     Stage = SyncStage.UploadingCalendarEvents,
                     Statistics = Context.Statistics,

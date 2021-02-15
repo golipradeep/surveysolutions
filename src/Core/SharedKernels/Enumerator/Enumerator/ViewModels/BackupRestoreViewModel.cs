@@ -174,8 +174,8 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels
                 return;
 
             if (await this.userInteractionService.ConfirmAsync(
-                EnumeratorUIResources.Troubleshooting_RestoreConfirmation.FormatString(this.RestoreLocation),
-                string.Empty, UIResources.Yes, UIResources.No))
+               EnumeratorUIResources.Troubleshooting_RestoreConfirmation.FormatString(this.RestoreLocation),
+                string.Empty, EnumeratorUIResources.Yes, EnumeratorUIResources.No))
             {
                 this.IsBackupInProgress = true;
                 try

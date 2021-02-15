@@ -67,7 +67,7 @@ namespace WB.UI.Shared.Enumerator.Services.Notifications
                             .SetAutoCancel(true)
 
                             .SetContentTitle("Interviewer")
-                            .SetContentText(UIResources.Notifications_SummaryTitle.FormatString(notificationModels.Count))
+                            .SetContentText(EnumeratorUIResources.Notifications_SummaryTitle.FormatString(notificationModels.Count))
                             .SetGroup(GROUP_NAME)
                             .SetGroupSummary(true)
                             .SetSmallIcon(notificationModels.First().IconId);

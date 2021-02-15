@@ -42,8 +42,8 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails.Overview
 
             var interview = this.interviewRepository.Get(interviewId);
 
-            this.Errors = interview.GetFailedValidationMessages(identity, UIResources.Error).Select(ConvertToSafeHtml).ToList();
-            this.Warnings = interview.GetFailedWarningMessages(identity, UIResources.Error).Select(ConvertToSafeHtml).ToList();
+            this.Errors = interview.GetFailedValidationMessages(identity, EnumeratorUIResources.Error).Select(ConvertToSafeHtml).ToList();
+            this.Warnings = interview.GetFailedWarningMessages(identity, EnumeratorUIResources.Error).Select(ConvertToSafeHtml).ToList();
             this.Comments.Init(this.interviewId, identity, navigationState);
             this.Comments.HasComments = this.Comments.Comments.Count > 0;
         }

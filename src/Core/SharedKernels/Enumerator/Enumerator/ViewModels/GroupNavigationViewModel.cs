@@ -196,7 +196,7 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels
                     this.Title.Init(this.interviewId, this.groupOrSectionToNavigateIdentity);
                     return;
                 case NavigationGroupType.LastSection:
-                    this.Title.InitAsStatic(UIResources.Interview_CompleteScreen_ButtonText);
+                    this.Title.InitAsStatic(EnumeratorUIResources.Interview_CompleteScreen_ButtonText);
                     return;
                 default:
                     return;

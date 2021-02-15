@@ -52,7 +52,7 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.InterviewDetails
 
         public void Init(NavigationState navigationState)
         {
-            this.Title.InitAsStatic(UIResources.Interview_Cover_Screen_Title);
+            this.Title.InitAsStatic(EnumeratorUIResources.Interview_Cover_Screen_Title);
             
             this.navigationState = navigationState;
             this.navigationState.ScreenChanged += this.OnScreenChanged;

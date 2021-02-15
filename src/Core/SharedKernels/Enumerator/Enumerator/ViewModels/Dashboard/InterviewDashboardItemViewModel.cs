@@ -276,9 +276,9 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.Dashboard
             this.isInterviewReadyToLoad = false;
 
             var isNeedDelete = await this.UserInteractionService.ConfirmAsync(
-                EnumeratorUIResources.Dashboard_RemoveInterviewQuestion.FormatString(this.interview.InterviewKey),
-                okButton: UIResources.Yes,
-                cancelButton: UIResources.No);
+               EnumeratorUIResources.Dashboard_RemoveInterviewQuestion.FormatString(this.interview.InterviewKey),
+                okButton: EnumeratorUIResources.Yes,
+                cancelButton: EnumeratorUIResources.No);
 
             if (!isNeedDelete)
             {
@@ -300,9 +300,9 @@ namespace WB.Core.SharedKernels.Enumerator.ViewModels.Dashboard
                 if (this.Status == DashboardInterviewStatus.Completed)
                 {
                     var isReopen = await this.UserInteractionService.ConfirmAsync(
-                        EnumeratorUIResources.Dashboard_Reinitialize_Interview_Message,
-                        okButton: UIResources.Yes,
-                        cancelButton: UIResources.No);
+                       EnumeratorUIResources.Dashboard_Reinitialize_Interview_Message,
+                        okButton: EnumeratorUIResources.Yes,
+                        cancelButton: EnumeratorUIResources.No);
 
                     if (!isReopen)
                     {
