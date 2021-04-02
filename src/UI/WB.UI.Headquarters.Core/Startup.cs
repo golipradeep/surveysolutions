@@ -160,7 +160,8 @@ namespace WB.UI.Headquarters
                 EventStoreUpgradeSettings = new DbUpgradeSettings(typeof(WB.Persistence.Headquarters.Migrations.Events.M000_Init).Assembly,
                     typeof(WB.Persistence.Headquarters.Migrations.Events.M000_Init).Namespace),
                 WorkspacesMigrationSettings = DbUpgradeSettings.FromFirstMigration<M202011191114_InitWorkspaces>(),
-                SingleWorkspaceUpgradeSettings = DbUpgradeSettings.FromFirstMigration<WB.Persistence.Headquarters.Migrations.Workspace.M202011201421_InitSingleWorkspace>()
+                SingleWorkspaceUpgradeSettings = DbUpgradeSettings.FromFirstMigration<WB.Persistence.Headquarters.Migrations.Workspace.M202011201421_InitSingleWorkspace>(),
+                Quartz = DbUpgradeSettings.FromFirstMigration<M201905151013_AddQuartzTables>()
             };
 
             return unitOfWorkConnectionSettings;

@@ -20,11 +20,13 @@ using WB.Core.BoundedContexts.Headquarters.QuartzIntegration;
 using WB.Core.BoundedContexts.Headquarters.Synchronization.Schedulers.InterviewDetailsDataScheduler;
 using WB.Core.BoundedContexts.Headquarters.Users.UserPreloading.Tasks;
 using WB.Core.GenericSubdomains.Portable;
+using WB.Core.Infrastructure.Modularity;
 using WB.Infrastructure.Native;
 using WB.Infrastructure.Native.Storage.Postgre;
 using WB.Infrastructure.Native.Storage.Postgre.DbMigrations;
 using WB.Infrastructure.Native.Storage.Postgre.Implementation;
 using WB.Infrastructure.Native.Utils;
+using WB.UI.Headquarters.Resources;
 
 namespace WB.UI.Headquarters.Services.Quartz
 {
@@ -35,11 +37,6 @@ namespace WB.UI.Headquarters.Services.Quartz
             DbUpgradeSettings dbUpgradeSettings)
         {
             services.AddHostedService<QuartzMigrator>();
-
-            services.Configure<QuartzMigratorConfig>(c =>
-            {
-                c.DbUpgradeSetting = dbUpgradeSettings;
-            });
 
             services.AddQuartz(q =>
             {
@@ -120,27 +117,24 @@ namespace WB.UI.Headquarters.Services.Quartz
                 await schedule.RegisterJob();
             }
         }
-
-        private class QuartzMigratorConfig
-        {
-            public DbUpgradeSettings DbUpgradeSetting { get; set; }
-        }
-
+        
         private class QuartzMigrator : IHostedService
         {
             private readonly IServiceProvider serviceProvider;
-            private readonly IOptions<QuartzMigratorConfig> schedulerConfig;
+            private readonly UnderConstructionInfo underConstructionInfo;
 
-            public QuartzMigrator(IServiceProvider serviceProvider, IOptions<QuartzMigratorConfig> schedulerConfig)
+            public QuartzMigrator(IServiceProvider serviceProvider, UnderConstructionInfo underConstructionInfo)
             {
                 this.serviceProvider = serviceProvider;
-                this.schedulerConfig = schedulerConfig;
+                this.underConstructionInfo = underConstructionInfo;
             }
 
-            public async Task StartAsync(CancellationToken cancellationToken)
+            public Task StartAsync(CancellationToken cancellationToken)
             {
-                this.serviceProvider.RunQuartzMigrations(schedulerConfig.Value.DbUpgradeSetting);
-                await this.serviceProvider.InitQuartzJobs();
+#pragma warning disable 4014
+                underConstructionInfo.WaitForFinish.ContinueWith((r) => this.serviceProvider.InitQuartzJobs());
+#pragma warning restore 4014
+                return Task.CompletedTask;
             }
 
             public Task StopAsync(CancellationToken cancellationToken)

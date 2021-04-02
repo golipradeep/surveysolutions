@@ -32,5 +32,7 @@ namespace WB.Infrastructure.Native.Storage.Postgre
         
         public DbUpgradeSettings SingleWorkspaceUpgradeSettings { get; set; }
         public IConfiguration Configuration { get; set; }
+
+        public DbUpgradeSettings Quartz { get; set; }
     }
 }

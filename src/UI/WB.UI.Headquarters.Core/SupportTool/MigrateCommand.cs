@@ -14,6 +14,7 @@ using WB.Core.GenericSubdomains.Portable.ServiceLocation;
 using WB.Core.Infrastructure.Modularity;
 using WB.Infrastructure.Native;
 using WB.Infrastructure.Native.Storage.Postgre;
+using WB.UI.Headquarters.Services;
 
 namespace WB.UI.Headquarters.SupportTool
 {
