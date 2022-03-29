@@ -3,10 +3,7 @@
 # Client folder with the Android APKs
 # IMPORTANT: SDK version used for building must correspond to the runtime version here
 
-
-ARG DOTNET_VERSION=5.0
- 
-FROM mcr.microsoft.com/dotnet/aspnet:${DOTNET_VERSION}
+FROM mcr.microsoft.com/dotnet/aspnet:5.0
 
 ARG BUILT_APP=hq
 ARG FONTS=fonts
