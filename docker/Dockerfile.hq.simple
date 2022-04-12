@@ -33,7 +33,7 @@ ENV HQ_Scheduler__IsClustered=true
 
 WORKDIR /app
 EXPOSE 80
-HEALTHCHECK --interval=5s --timeout=30s --start-period=2s --retries=3 CMD curl -l http://localhost:80/.hc/ready
+HEALTHCHECK --interval=5s --timeout=30s --retries=3 CMD curl -l http://localhost:80/.hc/ready
 
 LABEL org.opencontainers.image.title="Survey Solutions"
 
